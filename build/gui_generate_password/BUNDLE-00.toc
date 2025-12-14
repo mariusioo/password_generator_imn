@@ -1,0 +1,3 @@
+([('gui_generate_password',
+   '/Users/mariusioo/projects_python/password_generator_imn/dist/gui_generate_password',
+   'EXECUTABLE')],)

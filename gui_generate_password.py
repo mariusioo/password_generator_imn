@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog
-from PIL import Image, ImageTk
+#from PIL import Image, ImageTk
 from datetime import datetime
 from password_gen import generate_password
 from pathlib import Path
@@ -96,7 +96,8 @@ def on_generate():
 
 
     password_var.set(pwd)
-    password_entry.config(fg="white")
+    password_entry.config(fg="black", bg="white")
+    #password_entry.config(fg="white")
     has_upper_var.set(1 if has_upper(pwd) else 0)
     has_lower_var.set(1 if has_lower(pwd) else 0)
     has_digits_var.set(1 if has_digits(pwd) else 0)
@@ -163,7 +164,7 @@ ttk.Checkbutton(root, text="Pronounceable", variable=pronounce_var).grid(row=5, 
 #generate pass button
 ttk.Button(root, text="Generate password", command=on_generate).grid(row=8, column=0, columnspan=2, sticky="w", padx=10)
 #generate entry box for created pass
-password_entry = tk.Entry(root, textvariable=password_var, width=30)
+password_entry = tk.Entry(root, textvariable=password_var, width=30, bg="white")
 password_entry.grid(row=9, column=0, columnspan=2, padx=10, pady=(0, 20))
 
 #check for different chars in pwd and check/uncheck the box or generate a green or red label for existent or nonexistent chars

@@ -111,11 +111,7 @@ def generate_password(
 
 
     password = reg_pron(clean_password_chars, password_length)
-    hist_path = "/Users/mariusioo/projects_python/tests/historical_passwords.txt"
-    #print("About to write:", repr(password))
-    with open(hist_path, "a") as file:
-        timestamp = datetime.now().strftime("%d-%m-%y %H:%M:%S")
-        file.write(f"{password}    was generated on: {timestamp}\n")
+    
       
     
     return password
